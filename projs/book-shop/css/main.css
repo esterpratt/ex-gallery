@@ -1,0 +1,40 @@
+@import url(../lib/bs4/css/bootstrap.min.css);
+
+html, body {
+    height: 100%;
+}
+
+th, td {
+    text-align: center;
+}
+
+.title-td {
+    text-align: left;
+}
+
+.books-container {
+    height: 70%;
+}
+
+header {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    height: 10%;
+    background-color: darkgrey;
+    margin-bottom: 20px;
+}
+
+.btn-new-book {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+th:nth-child(2), th:nth-child(3) {
+    cursor: pointer;
+}
+
+.page-control-container {
+    margin: 0 auto;
+}

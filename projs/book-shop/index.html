@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <h1>What's Booking?</h1>
+    </header>
+
+    <div class="container books-container">
+        <!-- Collapse -->
+        <div class="collapse" id="collapsePrice">
+            <div class="card card-body">
+                Enter new Price
+                <input class="mb-2" name="newPrice" type="txt" id="newPrice" placeholder="New Price">
+                <button type="submit" onclick="updatePrice()" class="btn-update btn btn-warning">Update</button>
+            </div>
+        </div>
+        <div class="collapse" id="collapseNewBook">
+            <div class="card card-body">
+                Enter Title
+                <input class="mb-2" name="newBookTitle" type="txt" id="newBookTitle" placeholder="Title">
+                Enter Price
+                <input class="mb-2" name="newBookPrice" type="txt" id="newBookPrice" placeholder="Price">
+                <button type="submit" onclick="addNewBook()" class="btn-add-book btn btn-warning">Add</button>
+            </div>
+        </div>
+        <button class="btn btn-success btn-new-book" onclick="readAndAddNewBook()">
+            Create New Book
+        </button>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr class="row">
+                    <th scope="col" class="col col-md-2">Id</th>
+                    <th scope="col" class="col col-md-4" onclick="onSortBooksByTitle()">Title</th>
+                    <th scope="col" class="col" onclick="onSortBooksByPrice()">Price</th>
+                    <th scope="col" class="col col-md-4">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="book-table"></tbody>
+        </table>
+        <div class="page-control-container d-flex w-25">
+            <button class="btn btn-dark mr-3" onclick="onPrevPage()">&#60;</button>
+            <div class="page-no"></div>
+            <button class="btn btn-dark ml-3" onclick="onNextPage()">&#62;</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="bookModalCenter" tabindex="-1" role="dialog" aria-labelledby="bookModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content d-flex">
+                    <div class="modal-header w-100">
+                        <h5 class="modal-title" id="bookModalLongTitle">Book title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body align-self-center d-flex flex-column">
+                        <div class="book-details align-self-center">
+                            <span class="price"></span>$
+                        </div>
+                        <img class="border border-dark rounded img-fluid mt-3" src="" id="book-img" alt="book cover" />
+                        <div class="rate mt-3 align-self-center">Rate:</div>
+                        <div class="rate-change-container d-flex justify-content-between mt-3 w-75 align-self-center bg-light">
+                            <button class="btn btn-dark" onclick="onRateDown()">-</button>
+                            <span class="rate-txt mr-3 ml-3 p-2"></span>
+                            <button class="btn btn-dark" onclick="onRateUp()">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="lib/bs4/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/util-service.js"></script>
+</body>
+
+</html>

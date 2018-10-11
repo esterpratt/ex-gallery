@@ -1,5 +1,5 @@
 'use strict';
 
-function getCurrDate() {
-    return new Date();
-}
+// function getCurrDate() {
+//     return new Date();
+// }

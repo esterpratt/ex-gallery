@@ -32,4 +32,22 @@ function renderModal(projId) {
     var proj = getProjById(projId);
     var $modal = $('.portfolio-modal .modal-body');
     $modal.find('h2').text(proj.name);
+    $modal.find('.item-intro').text(proj.title);
+    $modal.find('.proj-desc').text(proj.desc);
+    $modal.find('.proj-date').text(proj.publishedAt);
+    $modal.find('img').attr('src', `img/portfolio/${proj.id}.png`);
+    $modal.find('iframe').attr('src', `${proj.url}/index.html`);
+
+    var labelsHtmls = proj.labels.map(function (label) {
+        return `${label}`;
+    })
+    $modal.find('.proj-category').text(labelsHtmls.join(', '));
+}
+
+function onSubmitForm() {
+    // var mail = $('#userEmail').val();
+    var subject = $('#mailSubject').val();
+    var message = $('#mailMessage').val();
+    var page = `https://mail.google.com/mail/?view=cm&fs=1&to=esterpratt@gmail.com&su=${subject}&body=${message}`;
+    window.open(page);
 }

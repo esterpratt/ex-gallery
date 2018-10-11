@@ -1,0 +1,104 @@
+* {
+    padding: 0px;
+}
+
+.game {
+    margin: 0 auto;
+    width: 80%;
+    height: 540px;
+    border-radius: 30px;
+    /* box-sizing: border-box; */
+    background-image: url(../img/back-img.png);
+    background-size: 2%;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-color: crimson;
+}
+
+.pic {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    /* margin-bottom: 30px; */
+    width: 30%;
+    height: 200px;
+}
+
+.pic img {
+    width: auto;
+    height: 100%;
+    border: 1px solid rgb(37, 14, 32);
+    border-radius: 20px;
+}
+
+.answer {
+    list-style: none;
+    background-color: burlywood;
+    text-align: center;
+    color: rgb(109, 20, 20);
+    font-family: cursive;
+    font-size: 20px;
+    padding: 20px;
+    height: 30px;
+    width: 30%;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 1.5px solid black;
+    transition: all 0.5s;
+    box-shadow: -9px -7px 22px 0px rgba(92, 53, 8, 0.66);
+    text-shadow: 1px 1px rgba(126, 63, 19, 0.719);
+    font-weight: bold;
+}
+
+.answer:hover {
+    cursor: pointer;
+    background-color: rgb(163, 108, 68);
+    transform: scale(1.1, 1.1);
+}
+
+.start-over {
+    display: block;
+    text-align: center;
+    background-color: rgb(183, 149, 247);  
+    color: rgb(109, 20, 20);
+    font-family: cursive;
+    font-size: 20px;
+    padding: 3px;
+    height: 40px;
+    width: 15%;
+    margin: 20px auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    visibility: hidden;
+}
+
+.start-over:hover {
+    cursor: pointer;
+    background-color: rgb(163, 108, 68);
+}
+
+.start-over:focus {
+    /* background-color: rgb(139, 84, 45);
+    transform: scale(0.9, 0.9); */
+    outline: none;
+}
+
+.feedback {
+    background-color: green;
+    text-align: center;
+    color: bisque;
+    font-family: cursive;
+    font-size: 20px;
+    padding: 3px;
+    height: 30px;
+    width: 15%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1.5px solid black;
+}
+
+.wrong {
+    color: bisque;
+    background-color: firebrick;
+}

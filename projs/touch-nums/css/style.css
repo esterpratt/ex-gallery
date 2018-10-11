@@ -1,0 +1,119 @@
+.container {
+    background-color: rgb(176, 110, 238);
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    border: 1.2px solid black;
+    border-radius: 5px;
+}
+
+.header {
+    display: inline-block;
+    margin: auto;
+}
+
+.dif {
+    margin: 20px 0px 10px 5px;
+    border: 2px solid black;
+    border-radius: 2px;
+    background-color: crimson;
+    font-family: fantasy;
+    font-size: 15px;
+    width: 90px;
+    height: 20px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+}
+
+.dif:first-child {
+    margin-left: 0px;
+}
+
+.dif.pressed {
+    background-color: darkgrey;
+}
+
+.new-game {
+    clear: both;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 2px;
+    background-color: crimson;
+    font-family: fantasy;
+    font-size: 15px;
+    width: 90px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+}
+
+.new-game:hover {
+    cursor: pointer;
+    background-color: darkkhaki;
+}
+
+.time {
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 2px;
+    background-color: crimson;
+    font-family: fantasy;
+    width: 90px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    margin-left: 5px;
+}
+
+.time:hover, 
+.record:hover {
+    cursor: not-allowed;
+}
+
+.record {
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 2px;
+    background-color: crimson;
+    font-family: fantasy;
+    font-size: 15px;
+    width: 90px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    margin-left: 5px;
+}
+
+table {
+    clear: both;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+td {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: darkorange;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    text-align: center;
+    font-family: fantasy;
+    transition: 0.3s;
+}
+
+.unpressed:hover {
+    cursor: pointer;
+    background-color: darkkhaki;
+}
+
+td.pressed {
+    background-color: crimson;
+}
