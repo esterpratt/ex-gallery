@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mines Sweeper</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/mine.png" />
+</head>
+
+<body onload="init()" oncontextmenu="return false;" onmouseup="removeActivateHover()">
+    <h1>MINESWEEPER</h1>
+    <div class="game-container">
+        <div class="levels-container">
+            <button class="level" onclick="setLevel(0)">Begginer</button>
+            <button class="level" onclick="setLevel(1)">Medium</button>
+            <button class="level" onclick="setLevel(2)">Expert</button>
+            <div>Record for this level: <span class="record"></span> seconds</div>
+        </div>
+        <div class="header-container">
+            <div class="mines-count"></div>
+            <div class="play-again-smily" onclick="startGame()"></div>
+            <div class="timer">000</div>
+        </div>
+        <table>
+            <tbody class="board">
+            </tbody>
+        </table>
+    </div>
+    <script src="js/cells.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/general.js"></script>
+</body>
+
+</html>
