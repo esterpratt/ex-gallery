@@ -23,7 +23,7 @@ function renderProjs(projs) {
                     </div>
                 </div>`;
     });
-
+    
     // show
     $('#portfolios-container').html(strHtmls.join(''));
 }
