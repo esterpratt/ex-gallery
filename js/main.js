@@ -51,3 +51,8 @@ function onSubmitForm() {
     var page = `https://mail.google.com/mail/?view=cm&fs=1&to=esterpratt@gmail.com&su=${subject}&body=${message}`;
     window.open(page);
 }
+
+function openProject() {
+    var src = $('.portfolio-modal .modal-body iframe').attr('src');
+    window.open(src);
+}

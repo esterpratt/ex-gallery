@@ -26,38 +26,41 @@
 </head>
 
 <body id="page-top" onload="initPage()">
-  <div class="offcanvas-btn" onClick="openCanvas()">
-    <i class="fa fa-comment" aria-hidden="true"></i>
-  </div>
+  <!-- <div class="offcanvas-btn" onclick="openCanvas()">
+    <i class="fa fa-envelope" aria-hidden="true"></i>
+  </div> -->
   <aside class="offcanvas-aside">
 
     <!-- Contact -->
-    <section class="d-flex flex-column" id="contact">
-      <h4 class="align-self-center">Contact Me</h4>
+    <section class="pt-5 d-flex flex-column" id="contact">
+      <div class="offcanvas-btn" onclick="openCanvas()">
+        <i class="fa fa-close"></i>
+      </div>
+      <h4 class="align-self-center mt-3">Contact Me</h4>
       <form class="d-flex flex-column">
-        <div class="form-group m-3 mt-4">
-          <label for="userEmail">Your Email</label>
+        <div class="form-group m-3">
+          <label for="userEmail" class="web-font">Your Email</label>
           <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Type email here"
             required>
         </div>
         <div class="form-group m-3">
-          <label for="mailSubject">Subject</label>
+          <label for="mailSubject" class="web-font">Subject</label>
           <input type="text" class="form-control" id="mailSubject" placeholder="Type subject here">
         </div>
         <div class="form-group m-3">
-          <label for="mailMessage">Message Body</label>
+          <label for="mailMessage" class="web-font">Message Body</label>
           <textarea rows="6" type="text" class="form-control" id="mailMessage" placeholder="Type message here"></textarea>
         </div>
-        <button type="button" class="btn btn-success align-self-center" onclick="onSubmitForm()">Submit</button>
+        <button type="button" class="btn btn-dark align-self-center btn-submit mt-4" onclick="onSubmitForm()">Submit</button>
       </form>
     </section>
 
   </aside>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Meet Me</a>
+      <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">Meet Me</a> -->
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
@@ -74,7 +77,7 @@
             <a class="nav-link js-scroll-trigger" href="#me">Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link contact" onclick="openCanvas()"><i class="fa fa-envelope" aria-hidden="true"></i></a>
           </li>
         </ul>
       </div>
@@ -86,7 +89,7 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in">Welcome To my Portfolio</div>
-        <div class="intro-heading">It's Nice To Meet You</div>
+        <div class="intro-heading">Play Dead like a Possum</div>
         <a class="btn btn-xl js-scroll-trigger" href="#services">Tell Me More</a>
       </div>
     </div>
@@ -98,39 +101,36 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">Specialities</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3 class="section-subheading text-muted">Learning all the time.</h3>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            <img class="rounded-circle spec-img" src="img/specialities/js.jpeg" />
           </span>
           <h4 class="service-heading">Javascript</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <p class="text-muted">Learning how to speak the language of the
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur rerum atque quod dolores laudantium soluta quo.</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+            <img class="rounded-circle spec-img" src="img/specialities/css.jpeg" />
           </span>
           <h4 class="service-heading">CSS</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <p class="text-muted">Learning how to listen to the secrets of the
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quam totam necessitatibus accusantium officiis odit.</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+            <img class="rounded-circle spec-img" src="img/specialities/html.jpeg" />
           </span>
           <h4 class="service-heading">HTML</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <p class="text-muted">Learning how to see bewtween the lines of the
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ducimus aliquid, odit deserunt quis magnam soluta vero!</p>
         </div>
       </div>
     </div>
@@ -153,12 +153,12 @@
 
 
   <!-- Me -->
-  <section class="bg-light" id="me" style="padding: 0px;">
+  <section class="bg-light" id="me" style="padding: 0px; padding-bottom: 50px">
     <div class="row">
       <div class="col-sm-4">
         <div class="team-member">
           <img class="mx-auto rounded-circle" src="img/team/me.JPG" alt="">
-          <h4>Ester Pratt</h4>
+          <h4 class="heading">Ester Pratt</h4>
           <p class="text-muted">Web Developer</p>
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
@@ -180,18 +180,22 @@
         </div>
       </div>
       <div class="col-sm-8 flex-align-center">
-        <p class="large text-muted  about-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-          eaque, laboriosam veritatis, quos non quis ad perspiciatis,
-          totam corporis ea, alias ut unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
-          laboriosam veritatis, quos non quis ad perspiciatis,
-          totam corporis ea, alias ut unde.</p>
+        <p class="large text-muted  about-description">Imagine there's no countries
+          It isn't hard to do.
+          Nothing to kill or die for
+          And no religion too.
+          Imagine all the people living life in peace,
+          You may say I'm a dreamer
+          But I'm not the only one.
+          I hope some day you'll join us
+          And the world will be as one</p>
       </div>
     </div>
   </section>
 
 
   <!-- Footer -->
-  <footer>
+  <footer style="padding: 0px;">
     <div class="container">
       <div class="row">
         <div class="col-md-4 flex-align-center">
@@ -232,9 +236,7 @@
     </div>
   </footer>
 
-  <!-- Portfolio Modals -->
-
-  <!-- Modal -->
+  <!-- Portfolio Modal -->
   <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -248,14 +250,15 @@
             <div class="col-lg-11 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2>Project Name</h2>
-                <p class="item-intro text-muted"></p>
+                <h2 class="heading">Project Name</h2>
+                <button class="btn btn-light btn-open-project mb-2" type="button" onclick="openProject()">
+                  Open project in new tab</button>
                 <iframe src=""></iframe>
                 <p class="proj-desc"></p>
                 <ul class="list-inline">
-                  <li>Date: <span  class="proj-date"></span></li>
+                  <li>Date: <span class="proj-date"></span></li>
                   <li class="proj-client">Client: Coding Academy Project</li>
-                  <li>Categories: <span  class="proj-category"></span></li>
+                  <li>Categories: <span class="proj-category"></span></li>
                 </ul>
                 <button class="btn btn-secondary" data-dismiss="modal" type="button">
                   <i class="fa fa-times"></i>
