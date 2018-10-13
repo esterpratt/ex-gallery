@@ -23,7 +23,7 @@ function renderProjs(projs) {
                     </div>
                 </div>`;
     });
-    
+
     // show
     $('#portfolios-container').html(strHtmls.join(''));
 }
@@ -45,7 +45,6 @@ function renderModal(projId) {
 }
 
 function onSubmitForm() {
-    // var mail = $('#userEmail').val();
     var subject = $('#mailSubject').val();
     var message = $('#mailMessage').val();
     var page = `https://mail.google.com/mail/?view=cm&fs=1&to=esterpratt@gmail.com&su=${subject}&body=${message}`;
