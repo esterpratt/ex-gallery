@@ -1,15 +1,39 @@
 @import url(../lib/bs4/css/bootstrap.min.css);
 
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .toRtl {
+    align-self: flex-start;
+}
+
+body.rtl > .card-body {
+    direction: rtl;
+}
+
 html, body {
     height: 100%;
+}
+
+body {
+    padding-right: 0px !important;
 }
 
 th, td {
     text-align: center;
 }
 
+th {
+    font-size: 15px;
+}
+
 .title-td {
     text-align: left;
+}
+
+body.rtl .title-td {
+    text-align: right;
 }
 
 .books-container {
@@ -25,16 +49,45 @@ header {
     margin-bottom: 20px;
 }
 
-.btn-new-book {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 0px;
-}
-
 th:nth-child(2), th:nth-child(3) {
     cursor: pointer;
 }
 
-.page-control-container {
-    margin: 0 auto;
+.books-table .row {
+    margin: 0px;
+}
+
+.books-table button {
+    align-self: center;
+    margin-bottom: 2px;
+    width: 80%;
+    height: 40px;
+}
+
+.modal button.close {
+    margin-left: 0px;
+}
+
+.actions-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .modal {
+    margin: 0px;
+} */
+
+@media (min-width: 768px) {
+
+    .actions-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .books-table button {
+        align-self: center;
+        width: 32%;
+        padding: 0px;
+    }
 }

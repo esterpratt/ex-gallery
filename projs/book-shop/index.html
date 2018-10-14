@@ -8,49 +8,87 @@
 </head>
 
 <body onload="init()">
-    <header>
-        <h1>What's Booking?</h1>
+    <header class="d-flex flex-row justify-content-between">
+        <h1 data-lang="title">What's Booking?</h1>
+        <div class="lang-buttons align-self-center">
+            <button class="btn btn-primary" onclick="changeLang('en')">English</button>
+            <button class="btn btn-primary" onclick="changeLang('he')">עברית</button>
+        </div>
     </header>
 
     <div class="container books-container">
-        <!-- Collapse -->
-        <div class="collapse" id="collapsePrice">
-            <div class="card card-body">
-                Enter new Price
-                <input class="mb-2" name="newPrice" type="txt" id="newPrice" placeholder="New Price">
-                <button type="submit" onclick="updatePrice()" class="btn-update btn btn-warning">Update</button>
+        <!-- Price Modal -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="modalPrice">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="card card-body d-flex">
+                            <span data-lang="enterNewPrice" class="toRtl">Enter new Price</span>
+                            <input class="mb-2" name="newPrice" type="txt" id="newPrice" placeholder="Price" data-lang="bookPrice">
+                            <button type="submit" onclick="updatePrice()" class="btn-update btn btn-warning" data-lang="update">Update</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="collapse" id="collapseNewBook">
-            <div class="card card-body">
-                Enter Title
-                <input class="mb-2" name="newBookTitle" type="txt" id="newBookTitle" placeholder="Title">
-                Enter Price
-                <input class="mb-2" name="newBookPrice" type="txt" id="newBookPrice" placeholder="Price">
-                <button type="submit" onclick="addNewBook()" class="btn-add-book btn btn-warning">Add</button>
+
+        <!-- New Book Modal -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="modalNewBook">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="card card-body">
+                            <span data-lang="enterTitle" class="toRtl">Enter Title</span>
+                            <input class="mb-2" name="newBookTitle" type="txt" id="newBookTitle" placeholder="Title"
+                                data-lang="bookTitle">
+                            <span data-lang="enterPrice" class="toRtl">Enter Price</span>
+                            <input class="mb-2" name="newBookPrice" type="txt" id="newBookPrice" placeholder="Price"
+                                data-lang="bookPrice">
+                            <button type="submit" onclick="addNewBook()" class="btn-add-book btn btn-warning" data-lang="addBook">Add</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="btn btn-success btn-new-book" onclick="readAndAddNewBook()">
-            Create New Book
-        </button>
-        <table class="table table-striped">
+        <table class="books-table table table-striped table-bordered mt-5 mb-5">
             <thead class="thead-dark">
                 <tr class="row">
-                    <th scope="col" class="col col-md-2">Id</th>
-                    <th scope="col" class="col col-md-4" onclick="onSortBooksByTitle()">Title</th>
-                    <th scope="col" class="col" onclick="onSortBooksByPrice()">Price</th>
-                    <th scope="col" class="col col-md-4">Actions</th>
+                    <th scope="col" class="col col-2" data-lang="id">Id</th>
+                    <th scope="col" class="col col-4" onclick="onSortBooksByTitle()" data-lang="bookTitle">Title</th>
+                    <th scope="col" class="col col-2" onclick="onSortBooksByPrice()" data-lang="bookPrice">Price</th>
+                    <th scope="col" class="col col-4" data-lang="bookActions">Actions</th>
                 </tr>
             </thead>
             <tbody class="book-table"></tbody>
         </table>
-        <div class="page-control-container d-flex w-25">
-            <button class="btn btn-dark mr-3" onclick="onPrevPage()">&#60;</button>
-            <div class="page-no"></div>
-            <button class="btn btn-dark ml-3" onclick="onNextPage()">&#62;</button>
+        <div class="buttons-container d-flex flex-row justify-content-between">
+            <button class="btn btn-success btn-new-book" onclick="readAndAddNewBook()" data-lang="newBook">
+                Create New Book
+            </button>
+            <div class="page-control-container d-flex flex-row">
+                <button class="btn btn-dark" onclick="onPrevPage()">&#60;</button>
+                <div class="page-no d-flex flex-row mr-2 ml-2"></div>
+                <button class="btn btn-dark" onclick="onNextPage()">&#62;</button>
+            </div>
         </div>
 
-        <!-- Modal -->
+        <!-- Delete Modal -->
+        <div class="modal fade" id="SureModalCenter" tabindex="-1" role="dialog" aria-labelledby="SureModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body d-flex flex-column">
+                        <h4 data-lang="sure" class="mb-5 toRtl">Are You Sure?</h4>
+                        <div class="sure-buttons align-self-end">
+                            <button class="btn btn-danger" data-bookId="" onclick="onConfirmeDelete(this)" data-lang="deleteBook">Delete</button>
+                            <button class="btn btn-success" onclick="onNotToDelete()" data-lang="cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Read Modal -->
         <div class="modal fade" id="bookModalCenter" tabindex="-1" role="dialog" aria-labelledby="bookModalCenterTitle"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -63,14 +101,14 @@
                     </div>
                     <div class="modal-body align-self-center d-flex flex-column">
                         <div class="book-details align-self-center">
-                            <span class="price"></span>$
+                            <span class="price"></span>
                         </div>
                         <img class="border border-dark rounded img-fluid mt-3" src="" id="book-img" alt="book cover" />
-                        <div class="rate mt-3 align-self-center">Rate:</div>
+                        <div class="rate mt-3 align-self-center" data-lang="rate">Rate:</div>
                         <div class="rate-change-container d-flex justify-content-between mt-3 w-75 align-self-center bg-light">
-                            <button class="btn btn-dark" onclick="onRateDown()">-</button>
+                            <button class="btn btn-dark btn-rate-down" onclick="onRateDown()">-</button>
                             <span class="rate-txt mr-3 ml-3 p-2"></span>
-                            <button class="btn btn-dark" onclick="onRateUp()">+</button>
+                            <button class="btn btn-dark btn-rate-up" onclick="onRateUp()">+</button>
                         </div>
                     </div>
                 </div>
@@ -83,6 +121,7 @@
     <script src="js/main.js"></script>
     <script src="js/book-service.js"></script>
     <script src="js/util-service.js"></script>
+    <script src="js/i18n-service.js"></script>
 </body>
 
 </html>
