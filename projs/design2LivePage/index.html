@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogin</title>
+    <link rel="stylesheet" href="css/main-mobile-first.css">
+    <link rel="stylesheet" href="css/media-qeuries.css">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Header -->
+    <section class="header-color">
+        <div class="header-container container padding-container flex space-between align-center">
+            <div class="logo">
+                Blogin<span class="dot">.</span>
+            </div>
+            <!-- Nav-bar -->
+            <nav class="main-nav flex">
+                <button class="nav-icon-close align-self-end" onclick="toggleMenu()">X</button>
+                <!-- nav-links -->
+                <ul class="clean-list flex flex-column">
+                    <li class="main-nav-item-container position-relative">
+                        <a href="#" class="main-nav-item position-relative flex flex-column align-center justify-center">
+                            Journal
+                        </a>
+                        <div class="item-menu flex flex-column">
+                            <a href="#" class="flex align-center justify-center">October 2016</a>
+                            <a href="#" class="flex align-center justify-center">January 2017</a>
+                            <a href="#" class="flex align-center justify-center">April 2017</a>
+                            <a href="#" class="flex align-center justify-center">July 2017</a>
+                        </div>
+                    </li>
+                    <li class="main-nav-item-container position-relative">
+                        <a href="#" class="main-nav-item flex align-center justify-center">About</a>
+                    </li>
+                    <li class="main-nav-item-container position-relative">
+                        <a href="#" class="main-nav-item flex align-center justify-center">Work</a>
+                    </li>
+                    <li class="main-nav-item-container position-relative">
+                        <a href="#" class="main-nav-item flex align-center justify-center">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav-icon" onclick="toggleMenu()">☰</button>
+        </div>
+    </section>
+    <main class="container">
+        <!-- Posts -->
+        <div class="posts-container padding-container">
+            <ul class="clean-list flex flex-column align-center">
+                <li class="post-item flex flex-column">
+                    <div class="post-img-container">
+                        <img src="img/post1-img.png" alt="" class="post-img" />
+                    </div>
+                    <div class="post-text-container flex flex-column space-between">
+                        <div class="post-info">
+                            <h2>Duis aute irure dolor in
+                                henderit in voluptate.</h2>
+                            <div class="post-text">
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea
+                                    commo
+                                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat
+                                    nulla
+                                    pariatur...</p>
+                            </div>
+                        </div>
+                        <button class="flex align-center space-between align-self-center" onclick="toggleModal()">
+                            Continue Reading
+                        </button>
+                    </div>
+                </li>
+                <li class="post-item flex flex-column">
+                    <div class="post-img-container">
+                        <img src="img/post2-img.png" alt="" class="post-img" />
+                    </div>
+                    <div class="post-text-container flex flex-column space-between">
+                        <div class="post-info">
+                            <h2>Duis aute irure dolor in
+                                henderit in voluptate.</h2>
+                            <div class="post-text">
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea
+                                    commo
+                                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat
+                                    nulla
+                                    pariatur...</p>
+                            </div>
+                        </div>
+                        <button class="flex align-center space-between align-self-center" onclick="toggleModal()">
+                            Continue Reading
+                        </button>
+                    </div>
+                </li>
+                <li class="post-item flex flex-column">
+                    <div class="post-img-container">
+                        <img src="img/post3-img.png" alt="" class="post-img" />
+                    </div>
+                    <div class="post-text-container flex flex-column space-between">
+                        <div class="post-info">
+                            <h2>Duis aute irure dolor in
+                                henderit in voluptate.</h2>
+                            <div class="post-text">
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea
+                                    commo
+                                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat
+                                    nulla
+                                    pariatur...</p>
+                            </div>
+                        </div>
+                        <button class="flex align-center space-between align-self-center" onclick="toggleModal()">
+                            Continue Reading
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Page buttons -->
+        <div class="pages-btns padding-container flex space-between">
+            <button class="flex">
+                <span>&larr;</span>
+                <p>Previous</p>
+            </button>
+            <button class="flex">
+                <p>Next</p><span>&rarr;</span>
+            </button>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="flex justify-center align-center">
+        <div class="footer-container">
+            <div class="logo">Blogin<span class="dot">.</span></div>
+            <div class="rights"><span>© 2014 B</span>login.com - All Rights Reserved - Find more free Templates at
+                <span>Pixelhint.com</span></div>
+            <div class="social-links flex justify-center">
+                <button class="facebook-link flex justify-center align-center fa fa-facebook"></button>
+                <button class="twitter-link flex justify-center align-center fa fa-twitter"></button>
+                <button class="be-link flex justify-center align-center fa fa-behance"></button>
+                <button class="dribble-link flex justify-center align-center fa fa-dribbble"></button>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal-container">
+        <div class="modal-content flex flex-column space-between">
+            <h2 class="align-self-center">Join us to get access to the latest stories!</h2>
+            <div class="mail">
+                <p>Enter Your Mail</p>
+                <input class="align-self-center" />
+            </div>
+            <div class="modal-buttons align-self-center flex space-between">
+                <button>Submit</button>
+                <button onclick="toggleModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
