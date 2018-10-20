@@ -10,7 +10,7 @@ function createProjs() {
         desc: "Coding Academy Sep18 course First Sprint",
         // url: "projs/Minesweeper",
         publishedAt: "September 2018",
-        img: "Minesweeper.PNG",
+        img: "Minesweeper.png",
         labels: ["Matrixes", "keyboard events"]
     },
     {
@@ -30,7 +30,7 @@ function createProjs() {
         desc: "coding academy project",
         // url: "projs/touch-nums",
         publishedAt: "September 2018",
-        img: "touch-nums.PNG",
+        img: "touch-nums.png",
         labels: ["mouse events"]
     },
     {
