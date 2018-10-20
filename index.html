@@ -142,7 +142,7 @@
           <h3 class="section-subheading text-muted">Try my projects</h3>
         </div>
       </div>
-      <div class="row d-flex flex-row justify-content-between" id="portfolios-container">
+      <div class="row d-flex flex-row justify-content-around" id="portfolios-container">
 
       </div>
     </div>
@@ -226,29 +226,32 @@
   <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
+        <!-- <div class="close-modal" data-dismiss="modal">
           <div class="lr">
             <div class="rl"></div>
           </div>
-        </div>
+        </div> -->
         <div class="container">
           <div class="row">
             <div class="col-lg-11 mx-auto">
-              <div class="modal-body">
+              <div class="modal-body d-flex flex-column flex-align-center">
                 <!-- Project Details Go Here -->
                 <h2 class="heading">Project Name</h2>
-                <button class="btn btn-light btn-open-project mb-2" type="button" onclick="openProject()">
-                  Open project in new tab</button>
-                <iframe src=""></iframe>
+                <img src="" />
                 <p class="proj-desc"></p>
                 <ul class="list-inline">
                   <li>Date: <span class="proj-date"></span></li>
                   <li class="proj-client">Client: Coding Academy Project</li>
                   <li>Categories: <span class="proj-category"></span></li>
                 </ul>
-                <button class="btn btn-secondary" data-dismiss="modal" type="button">
-                  <i class="fa fa-times"></i>
-                  Close Project</button>
+                <div class="modal-buttons">
+                  <button class="btn btn-open-project" type="button" onclick="openProject()">
+                    <i class="fa fa-check"></i>
+                    Open project</button>
+                  <button class="btn btn-close-project" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                </div>
               </div>
             </div>
           </div>

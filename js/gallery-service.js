@@ -8,7 +8,7 @@ function createProjs() {
         name: "Minesweeper",
         title: "try not to blown up",
         desc: "Coding Academy Sep18 course First Sprint",
-        url: "projs/Minesweeper",
+        // url: "projs/Minesweeper",
         publishedAt: "September 2018",
         img: "Minesweeper.PNG",
         labels: ["Matrixes", "keyboard events"]
@@ -18,7 +18,7 @@ function createProjs() {
         name: "Guess Who",
         title: "try to fool me",
         desc: "Coding Academy Binary Tree, Bootstrap and Jquery project",
-        url: "projs/GuessMe",
+        // url: "projs/GuessMe",
         publishedAt: "October 2018",
         img: "GuessMe.png",
         labels: ["Binary tree", "bootstrap", "jquery"]
@@ -28,7 +28,7 @@ function createProjs() {
         name: "Touch Nums",
         title: "try not to get crazy",
         desc: "coding academy project",
-        url: "projs/touch-nums",
+        // url: "projs/touch-nums",
         publishedAt: "September 2018",
         img: "touch-nums.PNG",
         labels: ["mouse events"]
@@ -38,7 +38,7 @@ function createProjs() {
         name: "Ball Board",
         title: "try eat the balls",
         desc: "Coding Academy matrix project",
-        url: "projs/BallBoard",
+        // url: "projs/BallBoard",
         publishedAt: "September 2018",
         img: "BallBoard.png",
         labels: ["Matrixes", "keyboard events"]
@@ -48,20 +48,20 @@ function createProjs() {
         name: "Book Shop",
         title: "try read Dr Seuss",
         desc: "Coding Academy bootstrap and jquery project",
-        url: "projs/book-shop",
+        // url: "projs/book-shop",
         img: "book-shop.png",
         publishedAt: "October 2018",
         labels: ["bootstrap", "jquery"]
     },
     {
-        id: "in-picture",
-        name: "In Picture",
-        title: "try it on your kid",
-        desc: "Coding Academy CSS project. These kind of questions can help identify Autism tendencies with young children",
-        url: "projs/in-picture",
-        publishedAt: "September 2018",
-        img: "in-picture.png",
-        labels: ["css", "jquery"]
+        id: "design2LivePage",
+        name: "Design to Live Page",
+        title: "try spot the differences",
+        desc: "Coding Academy CSS project. Design live page from PSD file",
+        // url: "projs/design2LivePage",
+        publishedAt: "October 2018",
+        img: "design2LivePage.jpg",
+        labels: ["css"]
     },
     ];
 

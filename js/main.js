@@ -15,7 +15,7 @@ function renderProjs(projs) {
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                         </div>
-                        <img class="img-fluid" src="img/portfolio/${proj.img}" alt="">
+                        <img class="img-fluid" src="img/portfolio/pre/${proj.img}" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>${proj.name}</h4>
@@ -35,8 +35,8 @@ function renderModal(projId) {
     $modal.find('.item-intro').text(proj.title);
     $modal.find('.proj-desc').text(proj.desc);
     $modal.find('.proj-date').text(proj.publishedAt);
-    $modal.find('img').attr('src', `img/portfolio/${proj.id}.png`);
-    $modal.find('iframe').attr('src', `${proj.url}/index.html`);
+    $modal.find('img').attr('src', `img/portfolio/${proj.img}`);
+    // $modal.find('iframe').attr('src', `${proj.url}/index.html`);
 
     var labelsHtmls = proj.labels.map(function (label) {
         return `${label}`;
@@ -52,6 +52,9 @@ function onSubmitForm() {
 }
 
 function openProject() {
-    var src = $('.portfolio-modal .modal-body iframe').attr('src');
-    window.open(src);
+    var img = $('.portfolio-modal .modal-body img').attr('src');
+    var proj = `projs/${img.substring(14, img.length-4)}/index.html`;
+    console.log(proj);
+    
+    window.open(proj);
 }
