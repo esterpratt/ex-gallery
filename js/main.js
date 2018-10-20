@@ -36,7 +36,6 @@ function renderModal(projId) {
     $modal.find('.proj-desc').text(proj.desc);
     $modal.find('.proj-date').text(proj.publishedAt);
     $modal.find('img').attr('src', `img/portfolio/${proj.img}`);
-    // $modal.find('iframe').attr('src', `${proj.url}/index.html`);
 
     var labelsHtmls = proj.labels.map(function (label) {
         return `${label}`;
@@ -54,7 +53,5 @@ function onSubmitForm() {
 function openProject() {
     var img = $('.portfolio-modal .modal-body img').attr('src');
     var proj = `projs/${img.substring(14, img.length-4)}/index.html`;
-    console.log(proj);
-    
     window.open(proj);
 }

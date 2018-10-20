@@ -8,7 +8,6 @@ function createProjs() {
         name: "Minesweeper",
         title: "try not to blown up",
         desc: "Coding Academy Sep18 course First Sprint",
-        // url: "projs/Minesweeper",
         publishedAt: "September 2018",
         img: "Minesweeper.png",
         labels: ["Matrixes", "keyboard events"]
@@ -18,7 +17,6 @@ function createProjs() {
         name: "Guess Who",
         title: "try to fool me",
         desc: "Coding Academy Binary Tree, Bootstrap and Jquery project",
-        // url: "projs/GuessMe",
         publishedAt: "October 2018",
         img: "GuessMe.png",
         labels: ["Binary tree", "bootstrap", "jquery"]
@@ -28,7 +26,6 @@ function createProjs() {
         name: "Touch Nums",
         title: "try not to get crazy",
         desc: "coding academy project",
-        // url: "projs/touch-nums",
         publishedAt: "September 2018",
         img: "touch-nums.png",
         labels: ["mouse events"]
@@ -38,7 +35,6 @@ function createProjs() {
         name: "Ball Board",
         title: "try eat the balls",
         desc: "Coding Academy matrix project",
-        // url: "projs/BallBoard",
         publishedAt: "September 2018",
         img: "BallBoard.png",
         labels: ["Matrixes", "keyboard events"]
@@ -48,7 +44,6 @@ function createProjs() {
         name: "Book Shop",
         title: "try read Dr Seuss",
         desc: "Coding Academy bootstrap and jquery project",
-        // url: "projs/book-shop",
         img: "book-shop.png",
         publishedAt: "October 2018",
         labels: ["bootstrap", "jquery"]
@@ -58,7 +53,6 @@ function createProjs() {
         name: "Design to Live Page",
         title: "try spot the differences",
         desc: "Coding Academy CSS project. Design live page from PSD file",
-        // url: "projs/design2LivePage",
         publishedAt: "October 2018",
         img: "design2LivePage.jpg",
         labels: ["css"]
