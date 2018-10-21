@@ -9,7 +9,7 @@ function createProjs() {
         title: "try not to blown up",
         desc: "Coding Academy Sep18 course First Sprint",
         publishedAt: "September 2018",
-        img: "Minesweeper.png",
+        img: "Minesweeper.PNG",
         labels: ["Matrixes", "keyboard events"]
     },
     {
@@ -27,7 +27,7 @@ function createProjs() {
         title: "try not to get crazy",
         desc: "coding academy project",
         publishedAt: "September 2018",
-        img: "touch-nums.png",
+        img: "touch-nums.PNG",
         labels: ["mouse events"]
     },
     {
